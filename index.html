@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class Modification</title>
+    <style>
+  .theme-icon-dark{
+    height:60px;
+    width:60px;
+    cursor:pointer;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  .theme-icon-light{
+    height:60px;
+    width:60px;
+    cursor:pointer;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .active{
+    border: 3px solid #000;
+  }
+   
+  .theme-dark{
+  background-color: #000;
+  color:#fff;
+  }
+
+  .theme-light{
+  background-color: darkorange;
+  color:#000;
+  }
+
+
+
+</style>
+</head>
+<body id="body">
+    <div>
+        <img src="dark.png" class="theme-icon-dark active"
+         id="img-dark" onclick="darkmode()" />
+        
+
+        <img src="light.png" class="theme-icon-light" 
+         id="img-light" onclick="lightmode()" />
+
+
+        <h1>This is Light/Dark Mode theme changer</h1>
+        <p>
+            Every member of the human race knows that life can present difficult challenges, often taking all the fun out of our day to day lives.
+            To overcome these obstacles there are a lot of good strategies you can employ, and very often the answer lies within. 
+            One great way to dig deep and overcome your difficulties is to get motivated! You may need motivation for work, home life,
+            or simply to gain the extra positive energy necessary to develop success and get through the week. 
+            Enjoy the inspirational quotes below, and remember that the only limit to achieving our desires is one of imagination! 
+            Create your own happy life by filling it with purpose, and you can achieve excellence and fulfill your own dreams and your own life plan on your terms.
+            For some, there is only one motivation that they need, and that’s providing for their family. For others (like Elon Musk, for example) motivation can be harder to come by - 
+            especially if your goal is to move the human race forward and onto Mars!. 
+            feels like quitting at some point, and no one has all the answers. 
+            And even though it can be tempting to get under the blanket and shut out the world sometimes, quitting won’t make the challenges go away. 
+            If you give zero effort, you’ll have exactly the same number of chances at getting what you want.
+            Use these motivational quotes for work, for your personal life, and for anything that requires that extra boost of motivation.
+        </p>
+    </div>  
+   <script>
+     function darkmode(){
+
+     const imgDark = document.getElementById('img-dark');
+     imgDark.classList.add('active');
+
+     const imgLight = document.getElementById('img-light');
+     imgLight.classList.remove('active');
+
+     const bodyElement = document.getElementById("body");
+     bodyElement.className = "theme-dark";
+     }
+
+     function lightmode(){
+        const imgDark = document.getElementById('img-dark');
+        imgDark.classList.remove('active');
+
+        const imgLight = document.getElementById('img-light');
+        imgLight.classList.add('active');
+
+        const bodyElement = document.getElementById("body");
+        bodyElement.className = "theme-light";
+     }
+    </script>
+</body>
+</html>
